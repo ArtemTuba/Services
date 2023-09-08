@@ -1,0 +1,214 @@
+.footer {
+    background-color: $сolorBg;
+
+    .line__separator {
+        border-top: 2px solid $сolorSeparator;
+        @include center;
+    }
+
+    .footer__map,
+    .footer__ikon--link,
+    .footer__phone,
+    .footer__mail {
+        display: block;
+        text-decoration: none;
+    }
+
+    .footer__address {
+        color: $mainColor;
+        @include adressText;
+    }
+    
+    .footer__map {
+        @include adressMap;
+        text-transform: uppercase;
+    }
+    
+    .fa-facebook {
+        font-size: 2.375rem;
+    }
+    
+    .footer__phone {
+        color: $mainColorAlt;
+        @include fontSizeH4;
+    }
+    
+    .footer__mail {
+        @include fontSizeH4;
+    }
+    
+    .footer__map,
+    .footer__mail,
+    .fa-facebook {
+        color: $activeColorRegular;
+    
+        &:hover {
+            color: $accentColor;
+        }
+    }
+    
+    .footer__text {
+        color: $сolorText;
+        @include adressText;
+    } 
+}
+/*phone*/
+@media screen and (max-width: 767px) {
+
+    .line__separator {
+        width: 84%;
+    }
+
+    .footer__wrap {
+        width: 84%;
+        @include center;
+        padding-top: 11.59%;
+        padding-bottom: 10.85%;
+
+        .footer__contacts {
+            width: 64.8%;
+            @include center;
+            margin-bottom: 14%;
+            text-align: center;
+
+            .footer__map,
+            .footer__phone,
+            .footer__mail {
+                @include center;
+            }
+
+            .separator {
+                display: none;
+            }
+
+            .contacts__first {
+                margin-bottom: 12%; 
+            }
+
+            .footer__address {
+                margin-bottom: 6%; 
+            }
+
+            .footer__ikon--link {
+                margin-bottom: 6%;
+            }
+
+            .footer__phone {
+                margin-bottom: 6%; 
+            }
+        }
+
+        .footer__text {
+            text-align: center;
+        } 
+    }
+}
+/*tablet sd*/
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .line__separator {
+        width: 84%;
+    }
+
+    .footer__wrap {
+        width: 55%;
+        @include center;
+        padding-top: 9%;
+        padding-bottom: 8%;
+
+        .contacts {
+            @include flexWrapCenter;
+            margin-bottom: 5%;  
+    
+            .footer__address,
+            .separator,
+            .footer__ikon--link,
+            .footer__phone {
+                margin-right: 2.5%;
+            }
+        }
+    }
+
+    .footer__text {
+        text-align: center;
+    } 
+}
+
+/*tablet hd*/
+@media screen and (min-width: 1024px) and ( max-width: 1919px)  {
+ 
+    .line__separator {
+        width: 92%;
+    }
+
+    .footer__wrap {
+        width: 92%;
+        @include center;
+        @include flexBetween;
+        padding-top: 2%;
+        padding-bottom: 2%;
+
+        .footer__contacts {
+            width: 50%;
+
+            .contacts {
+                display: flex;
+                align-items: center;
+
+                .footer__address,
+                .separator,
+                .footer__ikon--link,
+                .footer__phone {
+                    margin-right: 1%;
+                }
+            }
+
+            .contacts__first {
+                margin-bottom: 2.6%;
+            }
+        }
+    }
+}   
+
+/*desktop hd*/
+@media screen and (min-width: 1920px) {
+ 
+    .line__separator {
+        width: 92%;
+    }
+
+    .footer__wrap {
+        width: 83%;
+        @include center;
+        @include flexBetween;
+        padding-top: 2%;
+        padding-bottom: 2%;
+
+        .footer__contacts {
+            width: 50%;
+
+            .contacts {
+                display: flex;
+                align-items: center;
+
+                .footer__address,
+                .separator,
+                .footer__ikon--link,
+                .footer__phone {
+                    margin-right: 1%;
+                }
+            }
+
+            .contacts__first {
+                margin-bottom: 2.6%;
+            }
+        }
+    }
+}   
+
+
+
+
+
+
+

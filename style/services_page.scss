@@ -1,0 +1,340 @@
+@import 'reset';
+@import 'mixin';
+@import 'tools';
+@import 'footer';
+@import 'header';
+
+
+
+.wrapper__main {
+    background: $gradientColorSuperSoft;
+}
+
+.section__services {
+    
+    border-radius: 0px 0px 12px 12px;
+
+    .section__wrap {
+        @include center;
+    }
+
+    .services__heading {
+        margin-bottom: 7.4%;
+        @include fontSizeHero;
+        background: $gradientColorText;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .card {
+        margin-bottom: 7.4%;
+
+        .card__ikon {
+            width: 92px;
+            height: 92px;
+            border-radius: 24px;
+            margin-bottom: 11.19%;
+        }
+    
+        .ikon__commerce {
+            background: $basicColor url(../imgs/ecommerce.svg) center center no-repeat;
+        }
+        .ikon__support {
+            background: $basicColor url(../imgs/support.svg) center center no-repeat;
+        }
+        .ikon__coprorate {
+            background: $basicColor url(../imgs/coprorate.svg) center center no-repeat;
+        }
+        .ikon__trust {
+            background: $basicColor url(../imgs/trust.svg) center center no-repeat;
+        }
+        .ikon__protection {
+            background: $basicColor url(../imgs/protection.svg) center center no-repeat;
+        }
+        .ikon__court {
+            background: $basicColor url(../imgs/court.svg) center center no-repeat;
+        }
+
+        .card__link {
+            display: block;
+            color: $activeColorRegular;
+            @include fontSizeH3;
+            margin-bottom: 5.6%;
+            text-decoration: none;
+        
+                &:hover {
+                    color: $accentColor;
+                }
+        }
+       
+        .card__text {
+            color: $basicColor;
+            @include paragraph;
+        }     
+    }
+}
+
+.shadow,
+.spacer {
+    width: 100%;
+    background-color: $basicColor;
+
+    .shadow__first,
+    .shadow__second {
+        @include center;
+        height: 10px;
+        border-radius: 0px 0px 12px 12px;
+    }
+    
+    .shadow__first {
+        background: #CACADB;
+    }
+
+    .shadow__second {
+        background: #E7E7F2;
+    }
+} 
+
+.spacer {
+    height: 60px;
+}
+
+.clients__title {
+    color: $mainColor;
+    @include fontSizeH3Caps;
+    text-align: center;
+    margin-bottom: 4%;
+}
+
+.hillel {
+    background:#1C4280 url(../imgs/hillel.png) center center no-repeat;
+    background-size: calc(50%);
+}
+
+.wannabiz {
+    background:#143646 url(../imgs/wannabiz.png) center center no-repeat;
+    background-size: calc(50%);
+}
+
+.tapgerine {
+    background: #F48B30 url(../imgs/tapgerine.png) center center no-repeat;
+    background-size: calc(50%);
+}
+
+.threedlook {
+    background: #9E4DC3 url(../imgs/3dlook.png) center center no-repeat;
+    background-size: calc(50%);
+}
+
+.orangear {
+    background: #FD9339 url(../imgs/orangear.png) center center no-repeat;
+    background-size: calc(50%);
+}
+
+.adteligent {
+    background: #E2E2E4 url(../imgs/adtelligent.png) center center no-repeat;
+    background-size: calc(50%);
+}
+
+.clickky {
+    background: #C71C36 url(../imgs/clickky.png) center center no-repeat;
+    background-size: calc(50%);
+}
+
+.ecoliasing {
+    background: #DCF3F9 url(../imgs/eco-leasing.png) center center no-repeat;
+    background-size: calc(50%);
+}
+
+.infratek {
+    background: #EAEAEA url(../imgs/infratek.png) center center no-repeat;
+    background-size: calc(50%);
+}
+
+.citypark {
+    background: #282240 url(../imgs/city-par.png) center center no-repeat;
+    background-size: calc(50%);
+}
+
+.artprint {
+    background: #1D4568 url(../imgs/artprint.png) center center no-repeat;
+    background-size: calc(50%);
+}
+
+.ultimatecard {
+    background: #000000 url(../imgs/ultimatecard.png) center center no-repeat;
+    background-size: calc(50%);
+}
+
+/*phone*/
+@media screen and  (max-width: 767px) {
+    .services__card,
+    .clients__item {
+        @include flexColumn;
+
+        .invisible {
+            display: none;
+        }
+    }
+    
+    .section__wrap {
+        width: 84%;
+
+        .card {
+            width: 100%;
+        }
+    }
+
+    .item__company {
+        width: 100%;
+        height: 120px;  
+    }
+
+    .shadow__first {
+        width: 89.3%;
+    }
+
+    .shadow__second {
+        width: 78.6%;
+    }
+}
+/*tablet sd*/
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .services__card,
+    .clients__item {
+        @include flexBetweenWrap;
+    }
+
+    .section__wrap {
+        width: 84.37%;
+
+        .card {
+            width: 45.37%;
+        }
+    }
+
+    .item__company {
+        width: 33.333%;
+        height: 120px;  
+    }
+
+    .shadow__first {
+        width: 94.7%;
+    }
+    
+    .shadow__second {
+        width: 89.6%;
+    }
+}
+/*tablet hd*/
+@media screen and (min-width: 1024px) and ( max-width: 1399px) {
+    .services__card,
+    .clients__item {
+        @include flexBetweenWrap;
+    }
+    
+    .section__wrap {
+        width: 88.3%;
+
+        .card {
+            width: 28.9%;
+        }
+    }
+  
+    .item__company {
+        width: 25%;
+        height: 120px;  
+    }
+
+    .shadow__first {
+        width: 96%;
+    }
+    
+    .shadow__second {
+        width: 92.1%;
+    }
+}   
+/*desktop sd*/
+@media screen and (min-width: 1400px) and ( max-width: 1919px) {
+    .services__card,
+    .clients__item {
+        @include flexBetweenWrap;
+    }
+
+    .section__wrap {
+        width: 91.6%;
+
+        .card {
+            width: 30.3%;
+        }
+    }
+
+    .item__company {
+        width: 25%;
+        height: 120px;  
+    }
+
+    .shadow__first {
+        width: 97.22%;
+    }
+    
+    .shadow__second {
+        width: 94.44%;
+    }
+}
+/*desktop hd*/
+@media screen and (min-width: 1920px)  {
+
+    .services__card,
+    .clients__item {
+        @include flexBetweenWrap;
+    }
+
+    .section__wrap {
+        width: 83.3%;
+
+        .card {
+            width: 30.81%;
+        }
+    }
+
+    .clients__wrap {
+        width: 89.5%;
+        @include center;
+
+        .clients__item {
+            margin-bottom: 4%;
+        }
+
+        .item__company {
+            width: 25%;
+            height: 120px;  
+        }
+    }
+
+    .hillel {
+        border-radius: 12px 0 0 0;
+    }
+
+    .threedlook {
+        border-radius: 0 12px 0 0;
+    }
+
+    .infratek {
+        border-radius: 0 0 0 12px;
+    }
+
+    .ultimatecard {
+        border-radius: 0 0 12px 0;
+    }
+
+    .shadow__first {
+        width: 97.9%;
+    }
+    
+    .shadow__second {
+        width: 96%;
+    }
+}
+
